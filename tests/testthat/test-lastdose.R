@@ -69,7 +69,7 @@ test_that("lastdose_df [LSD-TEST-007]", {
 test_that("lastdose_list [LSD-TEST-008]", {
   y <- lastdose_list(set1)
   expect_is(y,"list")
-  expect_identical(names(y), c("tad", "tafd","ldos"))
+  expect_identical(names(y), c("tad", "tafd","ldos", "occ"))
 })
 
 test_that("required columns [LSD-TEST-009]", {

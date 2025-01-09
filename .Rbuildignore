@@ -2,6 +2,7 @@
 _pkgdown\.yml
 Makefile
 ^test\.R$
+^test-*\.R$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 README\.html

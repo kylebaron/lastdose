@@ -10,7 +10,8 @@ lastdose(
   data,
   ...,
   include_ldos = TRUE,
-  include_tafd = getOption("lastdose.include_tafd", FALSE)
+  include_tafd = getOption("lastdose.include_tafd", FALSE),
+  include_occ = getOption("lastdose.include_occ", TRUE)
 )
 
 lastdose_list(
@@ -21,7 +22,8 @@ lastdose_list(
   fill = -99,
   back_calc = TRUE,
   addl_ties = c("obs_first", "dose_first"),
-  comments = find_comments(data)
+  comments = find_comments(data),
+  include_occ = getOption("lastdose.include_occ", TRUE)
 )
 
 lastdose_df(data, ...)
@@ -36,6 +38,9 @@ appended to the data set.  Only used for the \code{\link[=lastdose]{lastdose()}}
 
 \item{include_tafd}{\code{logical}; if \code{FALSE}, then \code{TAFD} data is not appended
 to the data set.  Only used for the \code{\link[=lastdose]{lastdose()}} function.}
+
+\item{include_occ}{\code{logical}; if \code{FALSE} then \code{OCC} is not appended to the
+data set. Only used for the \code{\link[=lastdose]{lastdose()}} function.}
 
 \item{time_col}{character name for the \code{TIME} column; this could be time after
 first dose or time after first record or time relative to any origin; input
